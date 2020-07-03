@@ -13,7 +13,7 @@ def run_game():
 
     bg_color = (230, 230, 230)  # 设置背景色
 
-    ship = Ship(screen)  # 创建一艘飞船
+    ship = Ship(ai_settings, screen)  # 创建一艘飞船
 
     while True:  # 开始游戏主循环
         gf.check_events(ship)  # 监视键盘和鼠标事件
