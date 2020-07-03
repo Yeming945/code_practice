@@ -16,7 +16,7 @@ def run_game():
     ship = Ship(screen)  # 创建一艘飞船
 
     while True:  # 开始游戏主循环
-        gf.check_events()  # 监视键盘和鼠标事件
+        gf.check_events(ship)  # 监视键盘和鼠标事件
         gf.update_screen(ai_settings, screen, ship)
 
 
