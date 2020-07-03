@@ -16,11 +16,14 @@ class Ship():
         self.rect.bottom = self.screen_rect.bottom
 
         self.moving_right = False  # 向右移动标志
+        self.moving_left = False  # 向左移动标记
 
     def update(self):
         """ 根据移动标志调整飞船的位置 """
         if self.moving_right:
             self.rect.centerx += 1
+        if self.moving_left:
+            self.rect.centerx -= 1
 
     def blitem(self):
         """ 在指定位置绘制飞船 """
