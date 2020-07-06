@@ -20,10 +20,7 @@ def run_game():
     while True:  # 开始游戏主循环
         gf.check_events(ai_settings, screen, ship, bullets)  # 监视键盘和鼠标事件
         ship.update()
-        bullets.update()
-        for bullet in bullets.copy():
-            if bullet.rect.bottom <= 0:
-                bullets.remove(bullet)
+        gf.update_funcions(bullets)
         print(len(bullets))
         gf.update_screen(ai_settings, screen, ship, bullets)
 
